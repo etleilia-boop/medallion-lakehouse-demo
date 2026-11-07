@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+spark-warehouse/
+metastore_db/
+derby.log
+# Generated lake output (only landing/ sample data is versioned)
+data/lake/
+.DS_Store
+.idea/
+.vscode/

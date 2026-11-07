@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "medallion-lakehouse-demo"
+version = "0.1.0"
+description = "A tested PySpark medallion pipeline (bronze/silver/gold) with SCD2 historization, quarantine and data quality checks."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["pyspark>=3.5,<4"]
+
+[project.optional-dependencies]
+delta = ["delta-spark>=3.2,<4"]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+lakehouse = "lakehouse.pipeline:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

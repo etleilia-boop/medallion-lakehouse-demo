@@ -1,0 +1,5 @@
+supplier_id,supplier_name,country,category,payment_terms_days,is_active
+S001,Northwind Components,FR,Hardware,45,true
+S002,Blue Harbor Logistics,BE,Logistics,45,true
+S004,Cedar Consulting,GB,IT Services,60,true
+S005,Lumen Cloud,IE,Software,30,true
